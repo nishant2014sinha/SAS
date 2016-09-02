@@ -1,0 +1,124 @@
+
+OBJECTIVES: This assignment reinforces the following concepts:
+ inserting comments into SAS programs
+ defining and using SAS libraries
+ using the Output Delivery System (ODS)
+ displaying the contents of SAS libraries and data sets
+ creating, subsetting and printing SAS data sets from other SAS data sets
+ creating variables conditionally
+ controlling the input and output of rows of data
+
+3. Create a second folder with a name of your choosing on your computer or on SAS Studio, if you
+are using it, so that you can create permanent data sets and store them in this folder. Write a
+libname statement in your program that uses a name of your choosing to assign a libref to this
+folder
+
+4. Specify a fileref that will be used to designate the output file for your PDF output. Use a name
+for the file similar to the file names for the R assignments like FKincheloe_HW07_output.pdf.
+(Use your own ID in place of FKincheloe.) Open a PDF destination using this fileref to capture
+the output from the procedures that follow. Refer to the document ODS PDF Tip Sheet in
+Course Materials for options to control the output. Add an option to create the bookmarks but
+hide them so they are not visible by default.
+
+5. Using the tx_schools data set as input, create a new revised Texas High School data set in the
+permanent library you assigned in step 3 above. This data set will be different from the original
+data set in the following ways:
+a. The new data set will only contain observations with students in at least one of the high
+school classes; FR, SO, JR, or SR.
+b. The variables state, type, level, F16 and F17 will not be in the new data set.
+c. Supply labels for the variables fte_teachers, ptr, control, gr8, fr, so, jr, and sr. The labels
+will be Teachers (FTE), Student/Teacher Ratio, School Type, Eighth Graders, Freshmen,
+Sophomores, Juniors, and Seniors respectively.
+d. Compute the total number of students enrolled in high school in each school. Note:
+Eighth graders are not considered to be in high school. Give the new variable a label of
+HS Enrollment. Construct the computation in such a way that there will still be a total
+even if there is a missing value from one of the high school class variables.
+e. Create a new variable labeled Load Date that contains the current date as of the time
+the data set is created. The date should display in the format 06/26/2015. The date
+should be computed so that it will update automatically whenever the program is run.
+(This will cause the date in your output to be different than the sample output posted
+on eCampus.)
+
+6. Print the descriptor portion of your new data set.
+
+7. Print the first 9 observations of the new data set. Ensure that the labels are displayed in the
+output.
+
+8. In the steps that follow you will be creating temporary data sets that are subsets of the revised
+recruiting data set created in the previous step. The first data set will be a list of academies as
+indicated by the word ACADEMY in the school name. Exclude ACADEMY H S in Bell County
+which is named for the small town of Academy. You may find it helpful to use the keyword NOT
+with the logic that identifies this school. The data set will only contain the variables School,
+County, Enrollment, and Control.
+
+9. Print the data portion of the academies data set. Ensure the order of the variables in the
+printed output matches the sample on eCampus.
+
+10. Create a data set where the number of seniors is more than 25% of the value of the enrollment
+variable but eliminate those schools where all of the enrollment is made up of seniors. This data
+set will only contain the variables school, county, gr8, fr, so, jr, sr, and enrollment.
+
+11. Print the data portion of the data set created in the previous step. Ensure the order of the
+variables in the printed output matches the sample on eCampus. Suppress the printing of
+observation numbers.
+
+12. From the Texas High School data set we want to create three temporary data sets in a single
+data step as efficiently as possible. All subsetting, variable creation, and keeping or dropping of
+variables must be positioned for maximum efficiency. The following steps describe how the 3
+data sets are to be created:
+a. The variables control, fte_teachers and ptr will not be in any of the new data sets.
+b. Only include schools with students in all 4 of the high school classes FR, SO, JR, and SR.
+c. Use a series of conditional (if) statements to create a new variable named Division that
+reflects the size classification of each school based on enrollment. Public schools are in
+Divisions 1A through 6A. Private schools are in Divisions TAPS1 through TAPS3.
+Divisions are determined by the enrollments shown below:
+6A - 2100 & up
+5A - 1060 to 2099
+4A - 465 to 1059
+3A - 220 to 464
+2A - 105 to 219
+1A – Below 105
+TAPS3 - 111 & up
+TAPS2 - 56 to 110
+TAPS1 - 55 & below
+Construct the statements so the program executes as efficiently as possible. Process the
+public school divisions first as a group and then the private schools. Use the distribution
+shown below to determine the order of the statements within each group.
+d. Create a OneA data set with schools in division 1A and a TAPS1 data containing schools
+in division TAPS1. Neither of these data sets should contain the variable Division. The
+variable County should not be in the TAPS1 data set. Create a third data set named
+Align16 that contains all rows and all variables except those you were instructed to
+exclude in steps a and b.
+
+13. From the Align16 data set we want to create a temporary data set named GradeCount that is
+more conducive to certain types of reporting. This data set will only have 4 variables: School,
+Division, Grade and Students. Use the appropriate data set option to control which variables are
+included. There will be up to five rows per school. If the variable for Eighth Grade has an actual
+value (not missing or 0) then set the value of Grade to Eighth and the value of Students to the
+number in the Eighth Grade variable. Output the observation whenever there is a value. Your
+program code must include the word “do”. Repeat this process for the Freshman, Sophomore,
+Junior and Senior variables adjusting the value of Grade and Students accordingly. The step will
+read the 2120 observations from Align16 and the resulting data set should have 9283
+observations.
+
+14. Add a proc contents step that will show the contents of the work library without displaying the
+descriptor portion of each dataset. (NOTE: Unless you were told what to name a specific data
+set, your names may be different.)
+
+15. Use data set options to print 50 observations from Align16 beginning with B F TERRY HS. Do not
+show observation numbers in your output.
+
+16. Knowing what you do about the data set OneA, print the last 30 observations of the data set.
+Hard code the number into your print statement.
+
+17. Print the TAPS1 data set.
+
+18. Print the first 38 observations from the GradeCount data set.
+
+19. Copy the proc step below into your program and run it to print a report based on the
+GradeCount data set.
+proc tabulate data=gradecount;
+class division grade;
+var students;
+table grade='Grade', division*students=' '*sum=' '*f=comma7.;
+run;
