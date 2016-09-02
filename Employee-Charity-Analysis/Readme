@@ -1,0 +1,38 @@
+Merging 2 tables with mixed format, TRANSPOSE, SORT 
+
+2. From the fixerup_2016 data set, create a narrow data set containing the employee id and
+organization name. Use a data step and an array to accomplish this transformation. For
+efficiency, only read the variables you need from the input data set. The resulting data set
+should not contain any missing values for the organization name. You may find it handy later on
+to have the index value from your array so keep it in the output data set. The resulting data set
+should have 2243 observations and 3 variables. The first few values are shown below:
+
+3. Sort the new data set in place so that it can be merged with the data contained in the charities
+data set.
+
+4. In your work library create a sorted copy of the charities data set for merging with the new data
+set created in the previous steps.
+
+5. Use match merge to create a new data set that combines the charity category with the
+employee/organization data. Make sure no charities are included in the data when there have
+been no contributions made to that organization. The resulting data set should have 2243
+observations and 4 variables. The first few values are shown below:
+
+6. Use the transpose procedure to transform this data set back into a wide data set of charity
+categories that can be merged with the original contributions data set. The resulting data set
+should have 424 observations and 11 variables. The first few values are shown below:
+(NOTE: Not all columns are visible due to space limitations.)
+
+7. Use a single data step to perform a match merge that combines the organization types with the
+original fixerup_2016 data set and creates some summary variables. Apply the appropriate
+labels to your new variables. The successful solution will most likely use some arrays. Create a
+variable that contains the amount the employee contributed to Environment charities based on
+the organization type value loaded from the charities data set. Likewise, create a variable for
+the total the employee donated to Relief organizations. Create a third variable that contains the
+total amount the employee donated to all charities. Create a fourth variable that shows the
+percentage of the employee’s salary that was contributed. Label and format the percentage as
+shown in the output data.
+
+8. Print the descriptor portion and then the data portion of the final data set. When you print the
+data portion, suppress the printing of observation numbers and print only the variables shown
+in the output posted on eCampus.
