@@ -1,11 +1,4 @@
-/**********************************************************************************/
-/* Step 1																		  */
-/* #File name: nishant2014sinha_HW09_Prog                                         */
-/* #Created by: Nishant Sinha                                                     */  
-/* #Creation date: 07/17/2016      											      */
-/* #Last executed: 07/18/2016													  */        
-/* #Purpose: concepts of lectures SAS01-SAS13 combining, sorting, reporting       */
-/**********************************************************************************/
+
 
 /* Libref sasdata created with readonly access-*/
 
@@ -94,14 +87,14 @@ filename otppdf 'D:\Study_material_MS_MIS\summer16\assignment\sas\asgn 10\nishan
 options orientation= landscape nonumber dtreset;
 ods pdf file = otppdf;
 
-/*Step 4- Order of the observations in the ìMatched Schoolsî
+/*Step 4- Order of the observations in the ‚ÄúMatched Schools‚Äù
 data set (from step 2a) by descending Pupil/Teacher Ratio and descending number of Student*/
 
 PROC SORT DATA= MATCHED_SCHOOLS ;  
 	BY descending Combined_PTR descending students;
 RUN;
 
-/*Step 5- Printing the ìtop 20î schools based on highest PTR.*/
+/*Step 5- Printing the ‚Äútop 20‚Äù schools based on highest PTR.*/
 
 PROC PRINT DATA = MATCHED_SCHOOLS (obs=20) split='*' noobs;
 	
