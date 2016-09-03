@@ -1,3 +1,8 @@
+
+
+/*Step 2 Libref sasdata created with readonly access-
+*/
+
 libname sasdata 'D:\Study_material_MS_MIS\summer16\sas_data' access= readonly;
 
 /*Step 3 libref mylib created for following steps-
@@ -195,3 +200,9 @@ table grade='Grade', division*students=' '*sum=' '*f=comma7.;
 run;
 
 ods pdf close;
+
+
+
+
+
+   

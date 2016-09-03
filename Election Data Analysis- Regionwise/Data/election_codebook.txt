@@ -1,0 +1,289 @@
+ 
+      The file contains information on the campaigns of all 
+ individuals who have registered under the Federal Election 
+ Campaign Act candidates for the U.S. Senate or 
+ House of Representatives.  As such, the file includes a number 
+ of individuals who may not be statutory candidates under the 
+ 1979 Amendments to the FECA, e.g., someone seeking nomination 
+ to federal office who has not received contributions or made 
+ expenditures aggregating in excess of $5,000.  Also included 
+ are some individuals who have been certified by the appropriate 
+ state authorities as official Senate or House candidates in a 
+  primary, runoff, or general election but who have 
+ not registered as candidates under the FECA.
+ 
+      A campaign includes the candidate, the principal campaign 
+ committee as designated by the candidate, and any committees 
+ authorized by the candidate to accept contributions or make 
+ expenditures for the campaign.  This definition of a campaign 
+ does not include 1) any office account committee associated 
+ with a member of Congress, or 2) any joint fundraising 
+ committee authorized by the candidate in conjunction with other 
+ candidates or committees.  N.B.  The file for   does 
+ include committees authorized by  candidates which 
+ exist solely for the purpose of repaying debts from previous 
+ elections.  Candidates may choose to authorize a separate 
+ committee for this purpose, or they may use one committee for 
+ both current and past activity.  As the latter alternative has 
+ become more common, fewer so called "debt" committees have 
+ existed, and two candidates undertaking exactly the same 
+ activity (i.e., debt retirement) would be treated differently 
+ if debt committees were excluded.
+ 
+      The file contains one record for each campaign.  The records are arranged 
+ alphabetically by state abbreviation, and within state by 
+ office sought (Senate, then House) and by Congressional 
+ District.  
+
+      It is important that the limitations of the information on 
+ this tape be understood.  It represents   data which had 
+ been entered into the Commission's computer system as of the 
+day before the date of this file.  While it is intended to give 
+a complete picture of  the financial activity of these campaigns 
+during the two-year election cycle, it is possible that amendments 
+to reports will  have been filed after the generation of these files.
+ 
+      Available at the Commission for inspection are microfilmed 
+ copies of the original reports which show information as 
+ reported by the filers.  The microfilmed public record is the 
+ official record of the Federal Election Commission.  This data 
+ file is one of several tools which have been developed to 
+ summarize the vast quantity of data available on the 
+ microfilmed public record.
+ 
+
+ 
+ 
+ 
+ 
+ 
+     SPECIFICATIONS
+ 
+ 
+       HOUSE/SENATE FILE
+ 
+ 
+     ATTRIBUTE    DESCRIPTION   LOCATION
+ 
+ 
+ 1)    Candidate ID   ID number assigned by the Commis-      1-9
+        sion.  The first letter indicates the
+        federal office sought (S for Senate, H
+        for House).  The third and fourth char-
+        acters indicate the state in which the
+        candidate has run.  
+ 
+ 2)    Candidate Name      10-47
+        
+ 
+ 3)    Incumbent/Challenger/ Open-Seat             48      
+        I=Incumbent.  Incumbent campaigns are
+        those of candidates who have held a
+        Congressional office at any time dur-
+        ing the 103rd Congress.  With respect
+        to the special elections held in 1995 
+        and 1996 for vacant Congressional seats,
+        post-election receipts and disburse-
+        ments reported by the winners are
+        included in their incumbent-campaign
+        record.  Earlier monies reported by
+        these campaigns are found in their
+        special election record, coded as 
+        open-seat.  C=Challenger.  This in-
+        cludes all campaigns in which the 
+        candidate ran in a district which
+        contained an incumbent who sought
+        reelection.  In cases in which the
+        incumbent was defeated in the pri-
+        mary, the general election was consi-
+        dered to be between two challengers.
+        O=Open Seat.  Open-Seat campaigns
+        are those of candidates seeking elec-
+        tions in  to seats in 
+        which an incumbent was not seeking re-
+        election.   This category includes 
+        all special election records, al-
+        though monies of special election
+        candidates who ran again in the 
+        regular 1996 election process appear
+        in other records for these candidates,
+        coded as I for the special election
+        winner and as a C for losers who ran
+        again in the regular election.
+ 
+ 4)    Party    1=Democratic, 2=Republican, 3=Other     49
+        Party.  This information is defined
+        for incumbents by the caucus in which
+        they participate, for others, it is
+        taken from candidates' declarations on
+        their Statement of Candidacy or from
+        state ballot listings.
+ 
+ 5)    Party Desig    Three-character code for party.      50-52
+        AIP=American Independent Party
+        AMP=American Party
+        CIT=Citizens Party
+        COM=Communist Party
+        CRV=Conservative Party
+        CST=Constitutional Party
+        DEM=Democratic Party
+        DFL=Democratic Farm Labor Party
+        IND=Independent
+        LBL=Liberal Party
+        LBU=Liberty Union Party
+        LIB=Libertarian Party
+        NAP=Prohibition Party
+        NLP=Natural Law Party
+        PAF=Peace and Freedom Party
+        REF=Reform Party
+        RTL=Right to Life
+        SLP=Socialist Labor Party
+        SUS=Socialist Party U.S.A.
+        SWP=Socialist Workers Party
+        UNK=Unknown
+ 
+ 6)  Total Receipts      This column includes all incoming    53-62
+        funds reported on Line 16 by the 
+        candidates and all committees he or
+        she has authorized for a 1995 or 
+        1996 campaign.  It does not include
+        the receipts of office-account com-
+        mittees, or receipts by joint fund-
+        raising committees authorized by the
+        candidate in conjunction with other
+        candidates or committees.
+ 
+ 7)  Authorized Transfers From   This column includes the movement    63-72
+           of monies, goods, or property between
+         the authorized committees of a single
+         campaign.  Note that "transfers" do 
+        not include the transfers of funds
+        between the authorized committee and
+        office-account committees, or joint
+        fundraising committees.
+ 
+ 8)  Total Disbursements     This column    73-82
+      includes all outgoing          
+      funds reported by all authorized
+      committees on line 22.  It does
+      not include disbursements by office-
+      account committees, or joint fund-
+      raising committees.
+ 
+ 9)  Transfers to Authorized     83-92
+       See Authorized Transfers From above.
+ 
+ 10) Beginning Cash  1/1/95       93-102
+       The "cash-on-hand" of a campaign on
+       (or its initial 1995 "cash on
+        hand if it registered after 1/1/95) 
+        is reported here.  The information is
+        taken from Line 23.
+ 
+ 11) Ending Cash    The "cash-on-hand" of a campaign on      103-112
+        the campaign's latest report in 1996
+        is reported here.
+ 
+ 12) Contrib from Candidate       113-122
+       The total amount of contributions by 
+        the candidate to his or her own
+        campaign appears in this column.  
+        The source is line 11d.
+ 
+ 13) Loans from Candidate        123-132
+        This column contains the total amounts
+        of loans made by or guaranteed by the
+        candidate to his or own campaign. 
+        The source is line 13b.
+ 
+ 14) Other Loans      133-142
+        This column contains the total amounts 
+        of loans that were not made by or
+        guaranteed by the candidate.  The 
+        source is line 13b.
+ 
+ 15) Candidate Loan Repayments       143-152
+        This figure represents the total 
+        repayments made by the campaign of
+        loans made by or guaranteed by the
+        candidate.  Note that a common pat-
+        tern for losing candidates is to
+        forgive loans to their campaigns. 
+        This amount then appears as a can-
+        didate loan, a candidate loan repay-
+        ment, and a candidate contribution.
+        The information comes from Line 19a.
+
+ 16)  Other Loan Repayments       153-162
+        This amount represents the total
+        repayments made by the campaign of
+        loans made by and guaranteed by 
+        someone other than the candidate.
+        The source is Line 19b.
+ 
+ 17) Debts Owed By      This column contains the total debts     163-172
+        owed by the committee at the time of
+        the filing of their last report re-
+        ceived for the   election 
+        cycle.  The source is Line 10.
+ 
+ 18)  Total Indiv. Contrib  This amount represents the sum of all    173-182
+       individual contributions in any amount
+       received by the campaign.  The source 
+       of the information is Line 11a.
+ 
+ 
+ 19) State Code          183-184
+        
+ 20) District         The Congressional district within          185-186
+        which the candidate ran in 1995 or
+        1996.  Contains 00 for Senate candi-
+        dates.
+ 
+ 21) Spec Elec  Status     Blank=not involved in a special     187
+        election in 1995 or 1996.  W=won
+        special election.  L=Lost.  R=
+        Runoff was held following a 1995 
+        or 1996 special election.
+ 
+ 22) Primary Elec Status     Blank=not involved in a primary  188
+        election in 1996.  W=won
+        primary election.  L=Lost.  R=Runoff
+        was held following a 1996
+        primary.
+ 
+ 23) Runoff Elec Status  Blank=not involved in runoff elec-     189
+       tion.  W=won runoff.  L=Lost.
+ 
+ 24) General Elec Status  Blank=not involved in November,  190
+        1994 general election or Louisiana
+        multi-party primary.  W=Won general
+        election.  L=Lost.
+ 
+ 25) General Elec  Pct      Percentage of November, 1996 general     191-193
+        election vote received by the candi-
+        date.
+  
+ 26)  Contributions from Other Political Committees    			194-203
+ 	Included here are contributions from PACs, other candidates, and other
+	political committees not part of the political party organization.   This
+	value is taken from the detailed summary page of each report filed by 
+	the campaign.  This information will differ from information about
+	PAC contributions contained in hstap1.zip, because that material includes
+	only PAC contributions, and is taken from the PACs' reports.
+
+ 27)  Contributions from Party Committees                                204-213
+	Included here are contributions to the campaign from party
+	committees at the national, state, and local level.  This information
+	is taken from the detailed summary page of each report filed by the
+	campaign.  It may differ from the information about party contributions
+	included in hstap1.zip, where the information is taken from the party
+	committees who made contributions.
+
+ 28) Ending Date				214-221
+	The ending date of the most recent report filed by the campaign.
+	The format is mmddyyyy.
+
+ 29) Refunds to Individuals		222-231
+
+ 30) Refunds to Committees		232-241
