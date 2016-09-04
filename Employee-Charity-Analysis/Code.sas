@@ -1,12 +1,6 @@
 
 libname hwdata 'D:\Study_material_MS_MIS\summer16\sas_data' access= readonly;
-
-/*libref mylib created for following steps-*/
-
 libname mylib 'D:\Study_material_MS_MIS\summer16\sas_datasets';
-
-/*output file pdf */
-
 filename otppdf 'D:\Study_material_MS_MIS\summer16\assignment\sas\asgn 9\nishant2014sinha_HW09_output.pdf';
 ods pdf file = otppdf bookmarkgen=yes;
 
