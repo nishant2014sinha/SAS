@@ -1,7 +1,4 @@
 
-
-/* Libref sasdata created with readonly access-*/
-
 libname hwdata 'D:\Study_material_MS_MIS\summer16\sas_data' access= readonly;
 
 /*libref mylib created for following steps-*/
@@ -95,7 +92,7 @@ data WORK.GIVING_ANALYSIS;
 /*env_amt: contains the amount the employee contributed to Environment charities
   relief_amt: for the total the employee donated to Relief organizations. 
   total: that contains the total amount the employee donated to all charities. 
-  gift_pct: that shows the percentage of the employee’s salary that was contributed
+  gift_pct: that shows the percentage of the employeeâ€™s salary that was contributed
 */
 	total=0;env_amt=0; relief_amt=0;
 	array amt{*} amount:;
