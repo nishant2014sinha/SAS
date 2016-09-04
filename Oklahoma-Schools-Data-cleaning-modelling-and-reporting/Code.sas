@@ -1,27 +1,15 @@
 
-
-
-/*Libref sasdata created with readonly access*/
-
 libname okschl 'D:\Study_material_MS_MIS\summer16\sas_data' access= readonly;
-
-/* libref mylib created for following steps-*/
-
 libname MYLIB 'D:\Study_material_MS_MIS\summer16\sas_datasets';
 
 /*Step 2- */
 
 data MYLIB.OK_CLEAN ;
-	
-	
 	set okschl.ok_schools( rename =(County=COUNTYOKH grade8=chG8 grade9=chG9 grade10=chG10 grade11=chG11 grade12=chG12));	
 
 	/*Step 2a- remove the word COUNTY from each value*/
-
 	length county $ 12; /*reduce the length of the County variable by 7*/
-
 	County = Tranwrd(CountyOKH, ' COUNTY', '');
-
 	Label county='County';
 
 	/*Step 2b- Convert the Grade8-Grade12 variables from char to numeric using SELECT */
